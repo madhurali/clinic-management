@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Clinic Branches</h2>
+<a href="/add-branch">+ Add Branch</a>
+<table border="1" cellpadding="10">
+    <tr><th>ID</th><th>Name</th><th>Description</th></tr>
+    {% for branch in branches %}
+    <tr>
+        <td>{{ branch[0] }}</td>
+        <td>{{ branch[1] }}</td>
+        <td>{{ branch[2] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

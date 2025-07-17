@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Product List</h2>
+<a href="/add-product">+ Add Product</a>
+<table border="1" cellpadding="10">
+    <tr><th>ID</th><th>Name</th><th>Category</th><th>Stock</th><th>Price</th><th>Supplier</th></tr>
+    {% for product in products %}
+    <tr>
+        <td>{{ product[0] }}</td>
+        <td>{{ product[1] }}</td>
+        <td>{{ product[2] }}</td>
+        <td>{{ product[3] }}</td>
+        <td>{{ product[4] }}</td>
+        <td>{{ product[5] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
